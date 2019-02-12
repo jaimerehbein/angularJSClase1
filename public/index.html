@@ -1,0 +1,43 @@
+<html ng-app="CursoAngular">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.js"></script>
+        <script type="text/javascript" src="index.js"></script>
+    </head>
+    <body>
+        <h1>Bienvenidos a los {{ 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 }}</h1>
+        <div ng-controller="ControladorSuperior">
+            {{mensaje}}                  
+            <br /><br />
+            <table>
+                <thead>
+                    <tr>
+                        <td>Nombre</td>
+                        <td>Apellido</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="z in alumnos">
+                        <td>{{z.nombre}}</td>
+                        <td>{{z.apellido}}</td>
+                    </tr>
+                </tbody>
+            </table>            
+        </div>
+        <br />
+        <hr />
+        <div ng-controller="ControladorInferior">
+            {{mensaje}}
+            <input type="text" ng-model="urlImagen" />
+            <br />
+            <img src="{{urlImagen}}" />
+            <select ng-model="seleccionTurno">
+                <option>Mañana</option>
+                <option>Tarde</option>
+                <option>Noche</option>
+            </select>
+            <br />
+            <h1>{{seleccionTurno}}</h1>
+            <input type="button" value="OK" ng-click="unclick()" />
+        </div>
+    </body>
+</html>

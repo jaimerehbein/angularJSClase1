@@ -1,0 +1,14 @@
+{
+  "name": "angularclase1",
+  "version": "1.0.0",
+  "description": "Servidor de pruebas para correr AngularJS",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "EducacionIT",
+  "license": "MIT",
+  "devDependencies": {
+    "express": "^4.16.4"
+  }
+}
