@@ -1,43 +1,220 @@
-<html ng-app="CursoAngular">
-    <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.js"></script>
-        <script type="text/javascript" src="index.js"></script>
-    </head>
-    <body>
-        <h1>Bienvenidos a los {{ 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 }}</h1>
-        <div ng-controller="ControladorSuperior">
-            {{mensaje}}                  
-            <br /><br />
-            <table>
-                <thead>
-                    <tr>
-                        <td>Nombre</td>
-                        <td>Apellido</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr ng-repeat="z in alumnos">
-                        <td>{{z.nombre}}</td>
-                        <td>{{z.apellido}}</td>
-                    </tr>
-                </tbody>
-            </table>            
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>One Music - Modern Music HTML5 Template</title>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.js"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/core-img/favicon.ico">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+  
+
+    
+
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
-        <br />
-        <hr />
-        <div ng-controller="ControladorInferior">
-            {{mensaje}}
-            <input type="text" ng-model="urlImagen" />
-            <br />
-            <img src="{{urlImagen}}" />
-            <select ng-model="seleccionTurno">
-                <option>Mañana</option>
-                <option>Tarde</option>
-                <option>Noche</option>
-            </select>
-            <br />
-            <h1>{{seleccionTurno}}</h1>
-            <input type="button" value="OK" ng-click="unclick()" />
+    </div>
+
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+        <!-- Navbar Area -->
+        <div class="oneMusic-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="oneMusicNav">
+
+                        <!-- Nav brand -->
+                        <a href="index.html" class="nav-brand"><img src="" alt=""></a>
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+
+                            <!-- Close Button -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="#">Albums</a></li>
+                                    <li><a href="#">Pages</a>
+                                        <ul class="dropdown">
+                                            <li><a href="index.html">Home</a></li>
+                                            
+                                            
+                                        </ul>
+                                    </li>
+                                    <li><a href="event.html">Events</a></li>
+                                    <li><a href="">News</a></li>
+                                    <li><a href="">Contact</a></li>
+                                </ul>
+
+                                <!-- Login/Register & Cart Button -->
+                                <div class="login-register-cart-button d-flex align-items-center">
+                                    <!-- Login/Register -->
+                                    <div class="login-register-btn mr-50">
+                                        <a href="" id="loginBtn">Login / Register</a>
+                                    </div>
+
+                                    <!-- Cart Button -->
+                                    <div class="cart-btn">
+                                        <p><span class="icon-shopping-cart"></span> <span class="quantity"></span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Nav End -->
+
+                        </div>
+                    </nav>
+                </div>
+            </div>
         </div>
-    </body>
+    </header>
+    <!-- ##### Header Area End ##### -->
+
+    <!-- ##### Hero Area Start ##### -->
+    <section class="hero-area">
+        <div class="hero-slides owl-carousel">
+            <!-- Single Hero Slide -->
+            <div class="single-hero-slide d-flex align-items-center justify-content-center">
+                <!-- Slide Img -->
+                <div class="slide-img bg-img" style="background-image: url(https://images.pexels.com/photos/1130839/pexels-photo-1130839.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);"></div>
+                <!-- Slide Content -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="hero-slides-content text-center">
+                                <h6 data-animation="fadeInUp" data-delay="100ms">Busca tu Música</h6>
+                                <h2 data-animation="fadeInUp" data-delay="300ms">Encuentra tus artistas<span>Encuentra tus artistas</span></h2>
+                                <a data-animation="fadeInUp" data-delay="500ms" href="#" class="btn oneMusic-btn mt-50">Discover <i class="fa fa-angle-double-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Single Hero Slide -->
+            <div class="single-hero-slide d-flex align-items-center justify-content-center">
+                <!-- Slide Img -->
+                <div class="slide-img bg-img" style="background-image: url(https://images.pexels.com/photos/1757106/pexels-photo-1757106.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);"></div>
+                <!-- Slide Content -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="hero-slides-content text-center">
+                                <h6 data-animation="fadeInUp" data-delay="100ms">Musica independiente</h6>
+                                <h2 data-animation="fadeInUp" data-delay="300ms">La Musica es <span>Rebelión</span></h2>
+                                <a data-animation="fadeInUp" data-delay="500ms" href="#" class="btn oneMusic-btn mt-50">Discover <i class="fa fa-angle-double-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Hero Area End ##### -->
+
+    
+      
+  
+  
+  
+  
+
+
+      <!-- ##### Breadcumb Area Start ##### -->
+    <section class="breadcumb-area bg-img bg-overlay" style="background-image: url(https://images.pexels.com/photos/1561020/pexels-photo-1561020.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);">
+        <div class="bradcumbContent">
+            <p>Busca tu música local</p>
+            
+      <section class="search">
+            <div id="search-form">
+              <input type="text" name="search" id="search_field" placeholder="Search for Artist" value="">
+              <input type="submit" id="submit_button" value="Search">
+            </div>
+          </section>
+            <h2>Encontramos estas  Producciones</h2>
+        </div>
+    </section>
+    <!-- ##### Breadcumb Area End ##### -->
+
+    <!-- ##### Album Catagory Area Start ##### -->
+    <section class="album-catagory section-padding-100-0">
+        <div class="container">
+             <section    id="results" ></section>
+             <section class="player">
+
+                <audio id="music-player" preload="auto" controls="controls" src=""></audio>
+                <div id="playing">Now playing: </div>
+             </section>
+        </div>
+    </section>
+    <!-- ##### Album Catagory Area End ##### -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ##### All Javascript Script ##### -->
+
+    <script src="index.js"></script>
+    <!-- jQuery-2.2.4 js -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="js/plugins/plugins.js"></script>
+    <!-- Active js -->
+    <script src="js/active.js"></script>
+</body>
+
 </html>
